@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-                <p className="text-gray-600">Welcome to your account dashboard</p>
+                <p className="text-gray-600">Welcome, {user?.name}</p>
               </div>
               <button
                 onClick={handleLogout}

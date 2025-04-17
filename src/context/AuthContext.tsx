@@ -63,25 +63,34 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (email: string, password: string): Promise<boolean> => {
     try {
       setLoading(true);
+      setError(null);
       
       // In a real app, this would be an API call to your backend
       // For demo purposes, we'll simulate a successful login with any credentials
       // with a slight delay to simulate network request
       await new Promise(resolve => setTimeout(resolve, 1000));
       
+      // Create a random user ID for the session
+      const userId = Math.random().toString(36).substring(2, 15);
+      
+      // Use the email name part as the user name if not available
+      const name = email.split('@')[0];
+      
       // Mock user data
       const userData: User = {
-        id: '1',
-        name: 'John Doe',
+        id: userId,
+        name: name,
         email: email
       };
       
       setUser(userData);
       localStorage.setItem('user', JSON.stringify(userData));
+      console.log('User logged in:', userData);
       
       return true;
     } catch (error) {
       console.error('Login error:', error);
+      setError('Login failed. Please try again.');
       return false;
     } finally {
       setLoading(false);
@@ -92,24 +101,30 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const register = async (name: string, email: string, password: string): Promise<boolean> => {
     try {
       setLoading(true);
+      setError(null);
       
       // In a real app, this would be an API call to your backend
       // For demo purposes, we'll simulate a successful registration
       await new Promise(resolve => setTimeout(resolve, 1000));
       
+      // Create a random user ID for the session
+      const userId = Math.random().toString(36).substring(2, 15);
+      
       // Mock user data
       const userData: User = {
-        id: '1',
+        id: userId,
         name: name,
         email: email
       };
       
       setUser(userData);
       localStorage.setItem('user', JSON.stringify(userData));
+      console.log('User registered:', userData);
       
       return true;
     } catch (error) {
       console.error('Registration error:', error);
+      setError('Registration failed. Please try again.');
       return false;
     } finally {
       setLoading(false);
@@ -124,7 +139,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const value = {
     user,
-    isAuthenticated: !!user,
     loading,
     error,
     login,
