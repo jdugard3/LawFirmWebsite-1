@@ -16,6 +16,8 @@ const Contact: React.FC = () => {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -31,9 +33,13 @@ const Contact: React.FC = () => {
         [name]: false,
       });
     }
+    
+    // Clear submission states when form is modified
+    if (formSubmitted) setFormSubmitted(false);
+    if (submitError) setSubmitError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form
@@ -47,18 +53,41 @@ const Contact: React.FC = () => {
     
     // If no errors, submit form
     if (!Object.values(errors).some(Boolean)) {
-      // In a real application, you would send the form data to your backend or API
-      console.log('Form submitted:', formData);
-      setFormSubmitted(true);
+      setIsSubmitting(true);
+      setSubmitError(null);
       
-      // Reset form after submission
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
+      try {
+        // Send data to webhook
+        const response = await fetch('https://hook.us2.make.com/k564dt97dp8dj8dogaoxpb5rr5g6b1ii', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        if (response.ok) {
+          setFormSubmitted(true);
+          
+          // Reset form after submission
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: '',
+          });
+        } else {
+          // Handle error response
+          console.error('Form submission failed:', await response.text());
+          setSubmitError('There was an error submitting your message. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setSubmitError('Network error. Please check your connection and try again.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -125,9 +154,36 @@ const Contact: React.FC = () => {
               
               {formSubmitted ? (
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-                  <p>Thank you for contacting us! We will get back to you shortly.</p>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-sm font-medium text-green-800">Message Sent Successfully!</h3>
+                      <div className="mt-2 text-sm text-green-700">
+                        <p>Thank you for reaching out to us. A member of our team will review your message and get back to you within 1-2 business days.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ) : null}
+              
+              {submitError && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-sm font-medium text-red-800">{submitError}</h3>
+                    </div>
+                  </div>
+                </div>
+              )}
               
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -233,9 +289,20 @@ const Contact: React.FC = () => {
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-md transition-colors font-medium"
+                    disabled={isSubmitting}
+                    className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-md transition-colors font-medium disabled:opacity-70"
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      'Send Message'
+                    )}
                   </button>
                 </div>
               </form>
