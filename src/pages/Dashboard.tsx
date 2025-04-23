@@ -38,11 +38,11 @@ const Dashboard: React.FC = () => {
           
           <div className="mb-4">
             <div className="font-medium text-gray-900 mb-2">Outstanding Balance:</div>
-            <div className="text-2xl font-bold text-indigo-600">$2,500.00</div>
+            <div className="text-2xl font-bold text-[rgba(116,192,22,0.83)]">$2,500.00</div>
           </div>
           
           <div className="space-y-4 mb-6">
-            <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 flex items-center justify-center">
+            <button className="w-full bg-[rgba(116,192,22,0.83)] text-white py-2 px-4 rounded-md hover:bg-green-600 flex items-center justify-center">
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
                 <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd"></path>
@@ -90,7 +90,7 @@ const Dashboard: React.FC = () => {
               <div className="flex space-x-4">
                 <button
                   onClick={handlePayNow}
-                  className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 flex items-center"
+                  className="px-4 py-2 bg-[rgba(116,192,22,0.83)] text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 flex items-center"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -99,7 +99,7 @@ const Dashboard: React.FC = () => {
                 </button>
                 <button
                   onClick={handleLogout}
-                  className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="px-4 py-2 bg-[rgba(116,192,22,0.83)] text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                 >
                   Logout
                 </button>

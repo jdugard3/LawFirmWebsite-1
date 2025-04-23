@@ -120,7 +120,7 @@ const Register: React.FC = () => {
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Already have an account?{' '}
-            <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to="/login" className="font-medium text-[rgba(116,192,22,0.83)] hover:text-green-600">
               Sign in
             </Link>
           </p>
@@ -145,7 +145,7 @@ const Register: React.FC = () => {
           <div className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Full Name <span className="text-indigo-600">*</span>
+                Full Name <span className="text-[rgba(116,192,22,0.83)]">*</span>
               </label>
               <input
                 id="name"
@@ -157,7 +157,7 @@ const Register: React.FC = () => {
                 onChange={handleChange}
                 className={`appearance-none relative block w-full px-3 py-2 border ${
                   errors.name ? 'border-red-300' : 'border-gray-300'
-                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[rgba(116,192,22,0.83)] focus:border-[rgba(116,192,22,0.83)] focus:z-10 sm:text-sm`}
                 placeholder="John Doe"
               />
               {errors.name && (
@@ -167,7 +167,7 @@ const Register: React.FC = () => {
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email address <span className="text-indigo-600">*</span>
+                Email address <span className="text-[rgba(116,192,22,0.83)]">*</span>
               </label>
               <input
                 id="email"
@@ -179,7 +179,7 @@ const Register: React.FC = () => {
                 onChange={handleChange}
                 className={`appearance-none relative block w-full px-3 py-2 border ${
                   errors.email ? 'border-red-300' : 'border-gray-300'
-                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[rgba(116,192,22,0.83)] focus:border-[rgba(116,192,22,0.83)] focus:z-10 sm:text-sm`}
                 placeholder="john.doe@example.com"
               />
               {errors.email && (
@@ -189,7 +189,7 @@ const Register: React.FC = () => {
             
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                Password <span className="text-indigo-600">*</span>
+                Password <span className="text-[rgba(116,192,22,0.83)]">*</span>
               </label>
               <input
                 id="password"
@@ -201,7 +201,7 @@ const Register: React.FC = () => {
                 onChange={handleChange}
                 className={`appearance-none relative block w-full px-3 py-2 border ${
                   errors.password ? 'border-red-300' : 'border-gray-300'
-                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[rgba(116,192,22,0.83)] focus:border-[rgba(116,192,22,0.83)] focus:z-10 sm:text-sm`}
                 placeholder="********"
               />
               {errors.password && (
@@ -214,7 +214,7 @@ const Register: React.FC = () => {
             
             <div>
               <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">
-                Confirm Password <span className="text-indigo-600">*</span>
+                Confirm Password <span className="text-[rgba(116,192,22,0.83)]">*</span>
               </label>
               <input
                 id="confirmPassword"
@@ -226,7 +226,7 @@ const Register: React.FC = () => {
                 onChange={handleChange}
                 className={`appearance-none relative block w-full px-3 py-2 border ${
                   errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
-                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[rgba(116,192,22,0.83)] focus:border-[rgba(116,192,22,0.83)] focus:z-10 sm:text-sm`}
                 placeholder="********"
               />
               {errors.confirmPassword && (
@@ -239,7 +239,7 @@ const Register: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-70"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[rgba(116,192,22,0.83)] hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-70"
             >
               {isSubmitting ? (
                 <span className="flex items-center">
@@ -258,11 +258,11 @@ const Register: React.FC = () => {
           <div className="text-center text-sm">
             <p className="text-gray-600">
               By creating an account, you agree to our{' '}
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+              <a href="#" className="font-medium text-[rgba(116,192,22,0.83)] hover:text-green-600">
                 Terms of Service
               </a>{' '}
               and{' '}
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+              <a href="#" className="font-medium text-[rgba(116,192,22,0.83)] hover:text-green-600">
                 Privacy Policy
               </a>
             </p>
@@ -270,7 +270,7 @@ const Register: React.FC = () => {
         </form>
         
         <div className="mt-6">
-          <Link to="/" className="flex items-center justify-center text-sm text-indigo-600 hover:text-indigo-500 transition-colors">
+          <Link to="/" className="flex items-center justify-center text-sm text-[rgba(116,192,22,0.83)] hover:text-green-600 transition-colors">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>

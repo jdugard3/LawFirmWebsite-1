@@ -101,7 +101,7 @@ const Login: React.FC = () => {
             Or{' '}
             <a 
               href="/register" 
-              className="font-medium text-indigo-600 hover:text-indigo-500"
+              className="font-medium text-[rgba(116,192,22,0.83)] hover:text-green-600"
             >
               create a new account
             </a>
@@ -137,7 +137,7 @@ const Login: React.FC = () => {
                 required
                 className={`appearance-none relative block w-full px-3 py-2 border ${
                   errors.email ? 'border-red-300' : 'border-gray-300'
-                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[rgba(116,192,22,0.83)] focus:border-[rgba(116,192,22,0.83)] focus:z-10 sm:text-sm`}
                 placeholder="Email address"
                 value={formData.email}
                 onChange={handleChange}
@@ -159,7 +159,7 @@ const Login: React.FC = () => {
                 required
                 className={`appearance-none relative block w-full px-3 py-2 border ${
                   errors.password ? 'border-red-300' : 'border-gray-300'
-                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm`}
+                } placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-[rgba(116,192,22,0.83)] focus:border-[rgba(116,192,22,0.83)] focus:z-10 sm:text-sm`}
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}
@@ -176,7 +176,7 @@ const Login: React.FC = () => {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                className="h-4 w-4 text-[rgba(116,192,22,0.83)] focus:ring-[rgba(116,192,22,0.83)] border-gray-300 rounded"
               />
               <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                 Remember me
@@ -184,7 +184,7 @@ const Login: React.FC = () => {
             </div>
 
             <div className="text-sm">
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+              <a href="#" className="font-medium text-[rgba(116,192,22,0.83)] hover:text-green-600">
                 Forgot your password?
               </a>
             </div>
@@ -194,7 +194,7 @@ const Login: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-70"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[rgba(116,192,22,0.83)] hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-70"
             >
               {isSubmitting ? (
                 <span className="flex items-center">
