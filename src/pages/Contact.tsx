@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-[rgba(116,192,22,0.83)] py-20 px-4">
+      <section className="bg-gray-900 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h1>
           <p className="text-xl text-green-50 max-w-3xl mx-auto">
@@ -113,16 +113,16 @@ const Contact: React.FC = () => {
               
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-[rgba(116,192,22,0.83)] mb-4">Location</h3>
-                <p className="text-gray-600 mb-2">123 Legal Avenue, Suite 400</p>
-                <p className="text-gray-600 mb-2">New York, NY 10001</p>
+                <p className="text-gray-600 mb-2">2601 South Bayshore Drive, 18th Floor</p>
+                <p className="text-gray-600 mb-2">Coconut Grove, FL 33133</p>
                 <p className="text-gray-600">United States</p>
               </div>
               
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-[rgba(116,192,22,0.83)] mb-4">Contact Information</h3>
-                <p className="text-gray-600 mb-2">Phone: (555) 123-4567</p>
-                <p className="text-gray-600 mb-2">Fax: (555) 123-4568</p>
-                <p className="text-gray-600">Email: info@lawson-associates.com</p>
+                <p className="text-gray-600 mb-2">Phone: (305) 444-5969</p>
+                <p className="text-gray-600 mb-2">Fax: (305) 444-5970</p>
+                <p className="text-gray-600">Email: info@erralaw.com</p>
               </div>
               
               <div className="mb-8">
@@ -240,7 +240,7 @@ const Contact: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgba(116,192,22,0.83)]"
-                      placeholder="(555) 123-4567"
+                      placeholder="(305) 444-5969"
                     />
                   </div>
                   
@@ -316,12 +316,12 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-gray-50 h-96 rounded-lg overflow-hidden shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343035!2d-74.00425872429328!3d40.74076697138933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1680280143272!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.211556513058!2d-80.24261492361548!3d25.7354244138146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b7d0a65d7cc5%3A0xa57e89bef87a0bf0!2s2601%20S%20Bayshore%20Dr%2C%20Miami%2C%20FL%2033133!5e0!3m2!1sen!2sus!4v1685452174381!5m2!1sen!2sus"
               className="w-full h-full border-0"
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Law Firm Location Map"
+              title="Erra Law Firm - 2601 South Bayshore Drive, Coconut Grove"
             ></iframe>
           </div>
         </div>

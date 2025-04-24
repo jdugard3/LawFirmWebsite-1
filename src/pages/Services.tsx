@@ -116,10 +116,10 @@ const Services: React.FC = () => {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-indigo-900 py-20 px-4">
+      <section className="bg-gray-900 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Practice Areas</h1>
-          <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Comprehensive legal services tailored to meet your specific needs
           </p>
         </div>
@@ -132,18 +132,18 @@ const Services: React.FC = () => {
             {practiceAreas.map((area) => (
               <div key={area.id} className="bg-gray-50 rounded-lg p-8 shadow-md">
                 <div className="flex flex-col md:flex-row md:items-start gap-8">
-                  <div className="flex-shrink-0 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[rgba(116,192,22,0.83)] rounded-full flex items-center justify-center text-white">
                     {area.icon}
                   </div>
                   <div className="flex-grow">
-                    <h2 className="text-2xl font-bold text-indigo-900 mb-4">{area.title}</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h2>
                     <p className="text-gray-600 mb-8">{area.description}</p>
                     
-                    <h3 className="text-lg font-semibold text-indigo-900 mb-4">How We Can Help You</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-4">How We Can Help You</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                       {area.services.map((service, index) => (
                         <div key={index} className="flex items-start">
-                          <svg className="h-5 w-5 text-indigo-500 mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="h-5 w-5 text-[rgba(116,192,22,0.83)] mt-0.5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           <span className="text-gray-600">{service}</span>
@@ -151,7 +151,7 @@ const Services: React.FC = () => {
                       ))}
                     </div>
                     
-                    <Link to="/contact" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors font-medium">
+                    <Link to="/contact" className="inline-flex items-center text-[rgba(116,192,22,0.83)] hover:text-green-600 transition-colors font-medium">
                       Discuss Your Case
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -166,11 +166,11 @@ const Services: React.FC = () => {
       </section>
 
       {/* Consultation CTA */}
-      <section className="py-20 px-4 bg-indigo-900 text-white">
+      <section className="py-20 px-4 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Schedule a Consultation</h2>
-          <p className="text-xl mb-10 text-indigo-100">Our team of experienced attorneys is ready to help you with your legal matters.</p>
-          <Link to="/contact" className="bg-white hover:bg-indigo-50 text-indigo-900 px-8 py-4 rounded-md text-lg font-medium transition-all duration-300 inline-block">
+          <p className="text-xl mb-10 text-gray-300">Our team of experienced attorneys is ready to help you with your legal matters.</p>
+          <Link to="/contact" className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-md text-lg font-medium transition-all duration-300 inline-block">
             Contact Us Today
           </Link>
         </div>
