@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             </Link>
             <Link
               to="/services"
-              className="inline-block bg-white py-3 px-6 border border-transparent rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+              className="inline-block bg-white py-3 px-6 border border-transparent rounded-md text-base font-medium text-gray-900 hover:bg-gray-300"
             >
               Our Services
             </Link>
@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900">Business Law</h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                       From formation to contracts and compliance, we guide businesses through legal complexities with strategic advice.
                     </p>
                   </div>
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900">Real Estate Law</h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                       We handle residential and commercial real estate transactions, leases, and property disputes with precision.
                     </p>
                   </div>
@@ -99,7 +99,7 @@ const Home: React.FC = () => {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900">Estate Planning</h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                       We help you plan for the future with wills, trusts, and comprehensive estate planning strategies.
                     </p>
                   </div>
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900">Family Law</h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                       We provide compassionate representation in divorce, custody, and other family law matters.
                     </p>
                   </div>
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900">Personal Injury</h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                       We fight for the compensation you deserve after accidents and injuries caused by negligence.
                     </p>
                   </div>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900">Civil Litigation</h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                       Our skilled litigators represent clients in complex disputes with a strategic approach to resolution.
                     </p>
                   </div>
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-500">
+      <div className="bg-gray-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             <span className="block">Ready to get started?</span>
@@ -234,7 +234,7 @@ const Home: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-100 sm:w-auto"
+            className="mt-8 w-full bg-[rgba(116,192,22,0.83)] inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-white hover:bg-gray-500 sm:w-auto"
           >
             Contact Us
           </Link>

@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-gray-900 py-20 px-4">
+      <section className="bg-gray-700 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h1>
           <p className="text-xl text-green-50 max-w-3xl mx-auto">
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Contact Information and Form */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-300">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Contact Information */}
@@ -113,22 +113,22 @@ const Contact: React.FC = () => {
               
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-[rgba(116,192,22,0.83)] mb-4">Location</h3>
-                <p className="text-gray-600 mb-2">2601 South Bayshore Drive, 18th Floor</p>
-                <p className="text-gray-600 mb-2">Coconut Grove, FL 33133</p>
-                <p className="text-gray-600">United States</p>
+                <p className="text-gray-800 mb-2">2601 South Bayshore Drive, 18th Floor</p>
+                <p className="text-gray-800 mb-2">Coconut Grove, FL 33133</p>
+                <p className="text-gray-800">United States</p>
               </div>
               
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-[rgba(116,192,22,0.83)] mb-4">Contact Information</h3>
-                <p className="text-gray-600 mb-2">Phone: (305) 444-5969</p>
-                <p className="text-gray-600 mb-2">Fax: (305) 444-5970</p>
-                <p className="text-gray-600">Email: info@erralaw.com</p>
+                <p className="text-gray-800 mb-2">Phone: (305) 444-5969</p>
+                <p className="text-gray-800 mb-2">Fax: (305) 444-5970</p>
+                <p className="text-gray-800">Email: info@erralaw.com</p>
               </div>
               
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-[rgba(116,192,22,0.83)] mb-4">Business Hours</h3>
-                <p className="text-gray-600 mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p className="text-gray-600">Saturday - Sunday: Closed</p>
+                <p className="text-gray-800 mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p className="text-gray-800">Saturday - Sunday: Closed</p>
               </div>
               
               <div>

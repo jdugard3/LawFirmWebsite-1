@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-gray-900 py-20 px-4">
+      <section className="bg-gray-700 py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About Our Firm</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
@@ -15,18 +15,18 @@ const About: React.FC = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-300">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-[rgba(116,192,22,0.83)] mb-6">Our Story</h2>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 Lawson & Associates was founded in 1995 by Jonathan Lawson with a vision to provide exceptional legal services with integrity and dedication. What began as a small practice has grown into a respected firm with a team of experienced attorneys serving clients across various practice areas.
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 Over the years, we have built a reputation for excellence, professionalism, and client satisfaction. Our attorneys bring decades of combined experience to every case, ensuring that our clients receive the highest quality legal representation.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 Today, Lawson & Associates continues to uphold the founding principles of integrity, dedication, and client-focused service, as we help individuals and businesses navigate complex legal challenges and achieve favorable outcomes.
               </p>
             </div>
@@ -42,11 +42,11 @@ const About: React.FC = () => {
       </section>
 
       {/* Our Mission */}
-      <section className="py-20 px-4 bg-gray-100">
+      <section className="py-20 px-4 bg-gray-300">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Mission & Values</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Guiding principles that define our approach to legal representation</p>
+            <p className="text-gray-700 max-w-3xl mx-auto">Guiding principles that define our approach to legal representation</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -57,7 +57,7 @@ const About: React.FC = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 We maintain the highest ethical standards in all our interactions, providing honest advice and transparent communication to our clients.
               </p>
             </div>
@@ -69,7 +69,7 @@ const About: React.FC = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Dedication</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 We are committed to pursuing the best interests of our clients with unwavering dedication, working tirelessly to achieve favorable outcomes.
               </p>
             </div>
@@ -81,7 +81,7 @@ const About: React.FC = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Client-Focused</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 We prioritize client satisfaction, providing personalized attention and tailored solutions that address the unique needs of each client.
               </p>
             </div>
@@ -90,17 +90,17 @@ const About: React.FC = () => {
       </section>
 
       {/* Our Team */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gray-300">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Legal Team</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Meet our experienced attorneys who are dedicated to providing exceptional legal representation</p>
+            <p className="text-gray-700 max-w-3xl mx-auto">Meet our experienced attorneys who are dedicated to providing exceptional legal representation</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Attorney 1 */}
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-              <div className="h-80">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl transform hover:scale-105 cursor-pointer">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
                   alt="Jonathan Lawson" 
@@ -108,23 +108,27 @@ const About: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Jonathan Lawson</h3>
-                <p className="text-[rgba(116,192,22,0.83)] mb-4">Founding Partner</p>
-                <p className="text-gray-600 mb-4">
-                  With over 30 years of experience in business law and litigation, Jonathan has established himself as a respected legal expert and advocate.
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Santiago Eljaiek III. Esq.</h3>
+                <p className="text-[rgba(116,192,22,0.83)] mb-1">Shareholder & Founding Partner</p>
+                <p className="text-[rgba(116,192,22,0.83)] mb-4">Phone: 305-398-7757</p>
+
+                <p className="text-gray-700 mb-4">
+                  With extensive experience in real estate, corporate, and estate law, Santiago has built a distinguished career advising national and international clients on complex transactions and financings.
                 </p>
-                <p className="text-gray-800 font-medium">Areas of Practice:</p>
-                <ul className="text-gray-600 mt-2 space-y-1">
-                  <li>• Business Law</li>
+                <p className="text-gray-700 font-medium">Areas of Practice:</p>
+                <ul className="text-gray-700 mt-2 space-y-1">
+                  <li>• Real Estate Law</li>
                   <li>• Corporate Litigation</li>
-                  <li>• Contract Disputes</li>
+                  <li>• Sports and Entertainment Law</li>
+                  <li>• Condominium Law</li>
+                  <li>• Probate, Trusts, and Estates Planning</li>
                 </ul>
               </div>
             </div>
 
             {/* Attorney 2 */}
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-              <div className="h-80">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl transform hover:scale-105 cursor-pointer">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
                   alt="Sarah Thompson" 
@@ -132,13 +136,13 @@ const About: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Sarah Thompson</h3>
-                <p className="text-[rgba(116,192,22,0.83)] mb-4">Senior Partner</p>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Carlos F. Rodriguez</h3>
+                <p className="text-[rgba(116,192,22,0.83)] mb-4">Equity Partner</p>
+                <p className="text-gray-700 mb-4">
                   Sarah brings 20 years of experience in family law, guiding clients through complex legal matters with compassion and expertise.
                 </p>
-                <p className="text-gray-800 font-medium">Areas of Practice:</p>
-                <ul className="text-gray-600 mt-2 space-y-1">
+                <p className="text-gray-700 font-medium">Areas of Practice:</p>
+                <ul className="text-gray-700 mt-2 space-y-1">
                   <li>• Family Law</li>
                   <li>• Divorce Proceedings</li>
                   <li>• Child Custody</li>
@@ -147,8 +151,8 @@ const About: React.FC = () => {
             </div>
 
             {/* Attorney 3 */}
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-              <div className="h-80">
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl transform hover:scale-105 cursor-pointer">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
                   alt="Michael Rodriguez" 
@@ -158,21 +162,71 @@ const About: React.FC = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Michael Rodriguez</h3>
                 <p className="text-[rgba(116,192,22,0.83)] mb-4">Partner</p>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-700 mb-4">
                   Michael specializes in personal injury law with 15 years of experience helping victims secure the compensation they deserve.
                 </p>
-                <p className="text-gray-800 font-medium">Areas of Practice:</p>
-                <ul className="text-gray-600 mt-2 space-y-1">
+                <p className="text-gray-700 font-medium">Areas of Practice:</p>
+                <ul className="text-gray-700 mt-2 space-y-1">
                   <li>• Personal Injury</li>
                   <li>• Medical Malpractice</li>
                   <li>• Wrongful Death</li>
                 </ul>
               </div>
             </div>
+
+
+            {/* Attorney 4 */}
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl transform hover:scale-105 cursor-pointer">
+              <div className="h-80 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+                  alt="Jonathan Lawson" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Santiago Eljaiek III. Esq.</h3>
+                <p className="text-[rgba(116,192,22,0.83)] mb-4">Shareholder & Founding Partner</p>
+                <p className="text-gray-700 mb-4">
+                  With over 30 years of experience in business law and litigation, Jonathan has established himself as a respected legal expert and advocate.
+                </p>
+                <p className="text-gray-700 font-medium">Areas of Practice:</p>
+                <ul className="text-gray-700 mt-2 space-y-1">
+                  <li>• Business Law</li>
+                  <li>• Corporate Litigation</li>
+                  <li>• Contract Disputes</li>
+                </ul>
+              </div>
+            </div>
+
+             {/* Attorney 5 */}
+             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl transform hover:scale-105 cursor-pointer">
+              <div className="h-80 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+                  alt="Sarah Thompson" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Sarah Thompson</h3>
+                <p className="text-[rgba(116,192,22,0.83)] mb-4">Senior Partner</p>
+                <p className="text-gray-700 mb-4">
+                  Sarah brings 20 years of experience in family law, guiding clients through complex legal matters with compassion and expertise.
+                </p>
+                <p className="text-gray-700 font-medium">Areas of Practice:</p>
+                <ul className="text-gray-700 mt-2 space-y-1">
+                  <li>• Family Law</li>
+                  <li>• Divorce Proceedings</li>
+                  <li>• Child Custody</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
+
           <div className="text-center mt-12">
-            <Link to="/contact" className="inline-block bg-[rgba(116,192,22,0.83)] hover:bg-green-600 text-white px-6 py-3 rounded-md transition-colors font-medium">
+            <Link to="/contact" className="inline-block bg-[rgba(116,192,22,0.83)] hover:bg-green-700 text-white px-6 py-3 rounded-md transition-colors font-medium">
               Schedule a Consultation
             </Link>
           </div>
